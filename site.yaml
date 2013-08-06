@@ -1,0 +1,82 @@
+mode: learning
+#media_root: /media
+#media_url: /media
+#base_url: /
+media_root: /david/media
+media_url: /david/media
+base_url: /david
+template: hyde.ext.templates.jinja.Jinja2Template
+plugins:
+    - hyde.ext.plugins.meta.MetaPlugin
+    - hyde.ext.plugins.auto_extend.AutoExtendPlugin
+    - hyde.ext.plugins.sorter.SorterPlugin
+    - hyde.ext.plugins.tagger.TaggerPlugin
+    - hyde.ext.plugins.syntext.SyntextPlugin
+    - hyde.ext.plugins.textlinks.TextlinksPlugin
+context:
+    data:
+        rss: blog/atom.xml
+        author:
+            name: David Sánchez Crespillo
+            url: "http://sanchezcrespillo.net/david"
+        project:
+            name: Hyde
+            url: "http://hyde.github.com"
+            install: "http://hyde.github.com/install.html"
+        menu:
+          - title: Home
+            url: index.html
+          - title: CV
+            url: cv.html
+          - title: ICT
+            url: ict.html
+          - title: Music
+            url: music.html
+          - title: Blog
+            type: node
+            url: /david/blog
+        social:
+          - title: LinkedIn
+            url: http://www.linkedin.com/in/davidsanchezcrespillo
+            image: img/linkedin.png
+          - title: Facebook
+            url: http://www.facebook.com/davidsanchezcrespillo
+            image: img/facebook.png
+          - title: Delicious
+            url: http://www.delicious.com/dinopmi
+            image: img/delicious.png
+          - title: Slideshare
+            url: http://www.slideshare.net/dinopmi
+            image: img/slideshare.png
+          - title: Wikipedia
+            url: http://es.wikipedia.org/wiki/Usuario:Dinopmi
+            image: img/wikipedia.png
+          - title: Hispasonic
+            url: http://www.hispasonic.com/dinopmi
+            image: img/hispasonicos.png
+          - title: Youtube
+            url: http://www.youtube.com/dinopmi
+            image: img/youtube.png
+
+meta:
+    nodemeta: meta.yaml
+    created: !!timestamp 2010-01-01 00:00:00
+    author: David Sánchez Crespillo
+    charset: UTF-8
+sorter:
+    time:
+        attr:
+            - meta.created
+        reverse: true
+        filters:
+            source.kind: html
+            meta.listable: true
+tagger:
+    sorter: time
+    archives:
+        blog:
+            source: blog
+            target: tags
+            template: tagged_posts.j2
+            archive_extension: html
+

@@ -1,0 +1,6 @@
+===
+title: David Sánchez Crespillo - Blog
+extends: atom.j2
+listable: false
+excerpts_only: true
+===

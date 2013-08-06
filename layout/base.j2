@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>David Sánchez Crespillo {{ resource.meta.title_ending }}</title>
+        <meta name="description" content="David Sánchez Crespillo - Personal web site" />
+        <meta property="og:title" content="David Sánchez Crespillo{{ resource.meta.title_ending }}" />
+        <meta property="og:description" content="David Sánchez Crespillo{{ resource.meta.title_ending }}" />
+        <meta property="og:image" content="http://sanchezcrespillo.net{{ media_url('img/blanque.png') }}" />
+        {% from "macros.j2" import render_keywords with context %}
+        {{ render_keywords(resource) }}
+        <link rel="stylesheet" href="{{ media_url('css/style.css') }}">
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="{{ content_url('blog/atom.xml')}}">
+        <script type="text/javascript" src="{{ media_url('js/modernizr.custom.js') }}"></script>
+        <!--[if lt IE 9]>
+        <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js">
+        </script>
+        <![endif]-->
+    </head>
+    <body>
+        <header>
+            <hgroup>
+            <h1>David Sánchez Crespillo</h1>
+            </hgroup>
+        </header>
+        <nav class="mainmenu">
+        {# Move main menu rendering away from the base layout. This
+           way it can be used to generate the list many times, in
+           a footer, etc.
+        #}
+            <ul>
+            {% from "macros.j2" import render_social_links with context %}
+            {{ render_social_links() }}
+            {% from "macros.j2" import render_main_menu with context %}
+            {{ render_main_menu() }}
+            </ul>
+        </nav>
+        <article id="content">
+            {% filter markdown|typogrify -%}
+            {% block content %}{% endblock %}
+            {%- endfilter %}
+        </article>
+        <aside>
+            <p>Created by <a href="{{ author.url}}">{{ author.name}}</a>
+            using <a href="{{ project.url }}">{{ project.name }}</a>.
+            <a href="http://validator.w3.org/check?uri=referer">HTML5</a>
+            </p>
+        </aside>
+    </body>
+</html>

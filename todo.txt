@@ -1,0 +1,9 @@
+- Write something for the "Blog". Ideas: Working in heterogeneous teams, how I came to understand Dependency Injection...
+DONE - Add a Stack Overflow "badge"
+- Add a GitHub link (when there's something in GitHub).
+- Add sitemap.
+- Improve the tag cloud.
+- Add link to Hispasonicos in the music.html box.
+- Add link to Spip.net, mentioning my "translation efforts".
+- Add "Like", "Twitter" and "+1" buttons in each page.
+
