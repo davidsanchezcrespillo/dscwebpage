@@ -34,7 +34,7 @@ context:
             url: music.html
           - title: Blog
             type: node
-            url: /david/blog
+            url: blog/index.html
         social:
           - title: LinkedIn
             url: http://www.linkedin.com/in/davidsanchezcrespillo
@@ -42,9 +42,9 @@ context:
           - title: Facebook
             url: http://www.facebook.com/davidsanchezcrespillo
             image: img/facebook.png
-          - title: Delicious
-            url: http://www.delicious.com/dinopmi
-            image: img/delicious.png
+          #- title: Delicious
+          #  url: http://www.delicious.com/dinopmi
+          #  image: img/delicious.png
           - title: Slideshare
             url: http://www.slideshare.net/dinopmi
             image: img/slideshare.png

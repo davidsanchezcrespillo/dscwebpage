@@ -1,124 +1,6 @@
-* {
-    margin: 0;
-    padding: 0;
-}
-
-html, body {
-    color: #050505;
-    background-color: #ededed;
-}
-
-body {
-    margin: 0 auto;
-    width: 780px;
-    min-height: 500px;
-    font-size: 14px;
-    position: relative;
-
-    font-size: 62.5%;
-    font-family: Tahoma, sans-serif;
-}
-
-a {
-    color: #0000ff;
-}
-
-a:hover, a:focus {
-    text-decoration: none;
-}
-
-a img {
-    border: 0;
-}
-
-p, ul {
-    margin-bottom: 1.2em;
-}
-
-ul {
-    margin-left: 2em;
-}
-
-header {
-    padding-top: 10px;
-    
-    font-family: Tahoma, sans-serif;
-    font-weight: none;
-    /*height: 50px;*/
-    text-align: right;
-    
-    margin-bottom: 0.5em;
-}
-
-header h1 {
-    font-size: 24px;
-    font-weight: normal;
-    padding-right: 2em;
-}
-
-header h1 span {
-    color: #090909;
-}
-
-header h2 {
-    font-size: 18px;
-    font-weight: normal;
-    letter-spacing: 11px;
-}
-
-nav.mainmenu {
-    font-family: Tahoma, sans-serif;
-    text-align: right;
-    margin-right: 12px;
-}
-
-nav.mainmenu a,
-nav.mainmenu a:visited {
-    text-decoration: none;
-    color: #ff00ff;
-    font-size: 2em;
-}
-
-nav.mainmenu a.selected {
-    color: #888;
-}
-
-nav.mainmenu a:hover {
-    color: #ff0000;
-}
-
-nav.mainmenu ul {
-    margin-left:0;
-    padding-right: 2em;
-}
-
-nav.mainmenu ul li {
-    list-style-type: none;
-    display: inline-block;
-    padding-right: 1.5em;
-    vertical-align: middle;
-}
-
-aside {
-    width: 700px;
-    text-align: right;
-    font-size: 1em;
-}
-
-nav.mainmenu, aside {
-    /* to line up with the header */
-    padding-right: 5px;
-}
-
 #content {
-    font-size: 1.4em;
-    line-height: 1.6em;
-    margin-left: 50px;
     margin-bottom: 10px;
-    padding-left: 10px;
-    width: 670px;
     padding-top: 0.5em;
-    padding-bottom: 50px;
     border-top-style: solid;
     border-top-width: 1px;
     border-top-color: #555555;
@@ -126,24 +8,16 @@ nav.mainmenu, aside {
 
 #content h1 {
     color: #555555;
-    font-weight: bold;
-    font-size: 2em;
-    line-height: 1.1em;
-    font-family: Tahoma, sans-serif;
     margin-bottom: 12px;
 }
 
 #content h2 {
-    font-weight: bold;
-    font-size: 1.2em;
-    font-family: Tahoma, sans-serif;
     margin-bottom: 0.3em;
 }
 
 #content code {
     display: block;
     font-family: 'Courier New';
-    font-size: 1.2em;
     color: #eee;
     background-color: #222;
     padding: 5px 10px;
@@ -179,7 +53,6 @@ ul.tags li a{
 nav.post_nav{
     background-color: #efefef;
     margin-left: 0;
-    font-size: 12px;
     padding: 6px;
     margin-bottom: 12px;
     -moz-box-shadow: 0px 2px 4px #ccc; /* FF3.5+ */
@@ -236,22 +109,6 @@ a.backlink:hover, a.prev:hover, a.next:hover{
     color: #999;
 }
 
-.posttitle{
-    display: inline-block;
-    font-size: 24px;
-    line-height: 36px;
-}
-
-.postheader {
-    padding-top: 0;
-    text-align: left;
-    border-bottom: 1px solid #ccc;
-}
-
-.posttitle a {
-    text-decoration: none;
-}
-
 .listing {
     margin-left: 0;
 }
@@ -286,10 +143,7 @@ a.backlink:hover, a.prev:hover, a.next:hover{
 }
 
 ul.cloud {
-    padding: 6px;
-    background-color: #FFFFFF;
     margin-left: 0;
-    margin-right: 100px;
     border-style: solid;
     border-width: 1px;
     border-color: #bdbdbd;
@@ -300,14 +154,16 @@ ul.cloud li {
     display: inline-block;
 }
 
+/*
 ul.cloud li a {
     text-decoration: none;
 }
-
+*/
+/*
 ul.cloud li a:hover {
     text-decoration: underline;
 }
-
+*/
 table.publications {
     width: 100%;
     border-style: solid;
