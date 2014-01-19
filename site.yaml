@@ -57,6 +57,9 @@ context:
           - title: Youtube
             url: http://www.youtube.com/dinopmi
             image: img/youtube.png
+          - title: Github
+            url: https://github.com/davidsanchezcrespillo
+            image: img/github.png
 
 meta:
     nodemeta: meta.yaml
