@@ -32,6 +32,8 @@ context:
             url: ict.html
           - title: Music
             url: music.html
+          - title: Labas Rytas
+            url: /labas_rytas/
           - title: Blog
             type: node
             url: blog/index.html
