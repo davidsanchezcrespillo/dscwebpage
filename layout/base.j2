@@ -21,16 +21,17 @@
     <body>
 	<div class="container">
         <header>
+            <img class="side" src="{{ media_url('img/blanque.png') }}" alt="Photo" width="96" height="96" />
             <h1>David Sánchez Crespillo</h1>
         </header>
-        <div class="navbar">
+        <div class="navbar navbar-default">
 	  <div class="navbar-inner">
-	    <ul class="nav">
+	    <ul class="nav nav-pills">
         {% from "macros.j2" import render_main_menu with context %}
         {{ render_main_menu() }}
             </ul>
         </div>
-        <div class="navbar">
+        <div class="navbar navbar-default">
            <div class="navbar-inner">
             <ul class="nav nav-pills">
         {% from "macros.j2" import render_social_links with context %}
@@ -39,7 +40,7 @@
           </div>
         </div>
         </div>
-        <article id="content">
+        <article id="content" class="well">
             {% filter markdown|typogrify -%}
             {% block content %}{% endblock %}
             {%- endfilter %}

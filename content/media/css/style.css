@@ -1,9 +1,4 @@
 #content {
-    margin-bottom: 10px;
-    padding-top: 0.5em;
-    border-top-style: solid;
-    border-top-width: 1px;
-    border-top-color: #555555;
 }
 
 #content h1 {
@@ -154,16 +149,6 @@ ul.cloud li {
     display: inline-block;
 }
 
-/*
-ul.cloud li a {
-    text-decoration: none;
-}
-*/
-/*
-ul.cloud li a:hover {
-    text-decoration: underline;
-}
-*/
 table.publications {
     width: 100%;
     border-style: solid;
