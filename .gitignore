@@ -1,7 +1,13 @@
+# Ignore Hyde generated dependencies
+.hyde_deps
 
 # Ignore results
 deploy/*
 
 # Ignore Emacs backup files
-*~ 
+*.html~ 
+*.css~ 
+*.j2~ 
+*.yaml~
+
 
