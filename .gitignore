@@ -1,3 +1,7 @@
+
+# Ignore results
 deploy/*
-*.*~ 
+
+# Ignore Emacs backup files
+*~ 
 
