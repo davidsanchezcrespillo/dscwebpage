@@ -61,9 +61,10 @@
 {% endmacro %}
 
 {% macro render_audioplayer(res) %}
+{% if res.meta.tracklist %}
 <table class="tracklist">
 <tr><th>Title</th><th>&nbsp;</th><th>&nbsp;</th><th>&nbsp;</th><th>&nbsp;</th></tr>
-{% for item in res %}
+{% for item in res.meta.tracklist %}
 <tr>
 <td><a href="media/audio/{{ item.url }}.mp3">{{ item.title }}</a></td>
 <td>{% if item.description %} {{ item.description }} {% endif %}</td>
@@ -86,4 +87,5 @@
 </tr>
 {% endfor %}
 </table>
+{% endif %}
 {% endmacro %}

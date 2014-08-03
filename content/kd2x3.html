@@ -2,6 +2,19 @@
 extends: base.j2
 title_ending: "| KD2X3"
 default_block: content
+tracklist:
+  - title: 01. Makumba
+    url: mp3_KD2X3_-_Ben_entonats_-_01_-_Makumba
+    description: Popular brasilera - Heitor Villalobos.  
+  - title: 02. Without You
+    url: mp3_KD2X3_-_Ben_entonats_-_02_-_Without_you
+    description: Nilsson - Arr. Toni Salvà Andreu.
+  - title: 03. Sin ti
+    url: mp3_KD2X3_-_Ben_entonats_-_03_-_Sin_ti
+    description: P. Guizar - Arr. Pep Alarcón Pinya.
+  - title: 04. Come Together
+    url: mp3_KD2X3_-_Ben_entonats_-_04_-_Come_together
+    description: J. Lennon and P. McCartney. Arr. David Sánchez Crespillo
 ---
 
 #KD2X3
@@ -20,7 +33,7 @@ Its members were Pep Alarcón Pinya (conductor), Guillem Gelabert Deià, Toni Sa
 KD2X3 recorded a demo CD during May 2001, called “Ben entonats”. in the Ona Digital recording studios, under the guidance of Miquel Brunet. The songs are available at the following links:
 
 {% from "macros.j2" import render_audioplayer with context %}
-{{ render_audioplayer(kd2x3) }}
+{{ render_audioplayer(resource) }}
 
 ##Concerts
 
