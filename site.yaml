@@ -1,10 +1,10 @@
 mode: learning
-media_root: /media
-media_url: /media
-base_url: /
-#media_root: /david/media
-#media_url: /david/media
-#base_url: /david
+#media_root: /media
+#media_url: /media
+#base_url: /
+media_root: /david/media
+media_url: /david/media
+base_url: /david
 template: hyde.ext.templates.jinja.Jinja2Template
 plugins:
     - hyde.ext.plugins.meta.MetaPlugin
