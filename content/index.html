@@ -3,41 +3,40 @@ extends: base.j2
 title_ending: "Home"
 default_block: content
 rss: blog/atom.xml
+url: index.html
 ---
 <div class="row">
 	<div class="col-md-3 panel panel-primary">
 		<div class="panel-heading">
-			<h2 class="panel-title">CV</h2>
+			<h2 class="panel-title"><span class="glyphicon glyphicon-user"></span> CV</h2>
 		</div>
 		<div class="panel-body">
-			<ul class="list-group">
-			<li class="list-group-item"><a href="cv.html">100-words CV</a></li>
-			<li class="list-group-item"><a href="publications.html">Publications (1999-2002)</a></li>
-			<li class="list-group-item"><a href="masterthesis.html">My Master Thesis (2000)</a></li>
+			<ul class="list-unstyled">
+			<li><a href="cv.html">100-words CV</a></li>
+			<li><a href="publications.html">Publications (1999-2002)</a></li>
+			<li><a href="masterthesis.html">My Master Thesis (2000)</a></li>
 			</ul>
 		</div>
 	</div>
 	<div class="col-md-3 panel panel-primary">
 		<div class="panel-heading">
-			<h2 class="panel-title">Web Development</h2>
+			<h2 class="panel-title"><span class="glyphicon glyphicon-list-alt"></span> Development</h2>
 		</div>
 		<div class="panel-body">
-			<ul class="list-group">
-				<li class="list-group-item">My GitHub profile</li>
-				<li class="list-group-item">StackOverflow profile</li>
-				<li class="list-group-item"><a href="/labas_rytas/">Labas Rytas</a></li>
-				<li class="list-group-item"><a href="ltFeeds/">LT Feeds</a></li>
+			<ul class="list-unstyled">
+				<li><a href="/labas_rytas/">Labas Rytas</a></li>
+				<li><a href="ltFeeds/">LT Feeds</a></li>
 			</ul>
 		</div>
 	</div>
 	<div class="col-md-3 panel panel-primary">
 		<div class="panel-heading">
-			<h2 class="panel-title">Music</h2>
+			<h2 class="panel-title"><span class="glyphicon glyphicon-music"></span> Music</h2>
 		</div>
 		<div class="panel-body">
-			<ul class="list-group">
-				<li class="list-group-item"><a href="kd2x3.html">KD2X3</a></li>
-				<li class="list-group-item"><a href="canciones_de_campamento.html">Canciones de Campamento 2007</a></li>
+			<ul class="list-unstyled">
+				<li><a href="kd2x3.html">KD2X3</a></li>
+				<li><a href="canciones_de_campamento.html">Canciones de Campamento 2007</a></li>
 			</ul>
 		</div>
 	</div>
@@ -45,8 +44,8 @@ rss: blog/atom.xml
 	  {% from "macros.j2" import render_excerpt with context %}
       <div class="panel-heading">
       <h2 class="panel-title">
-      Latest blog post
-      <a href="{{ content_url( resource.meta.rss ) }}"><img src="{{ media_url('img/feed.png')}}" alt="RSS" height="16" width="16"/></a>
+      <span class="glyphicon glyphicon-pencil"></span> Latest blog post
+      <a href="{{ content_url( resource.meta.rss ) }}"><img src="{{ media_url('img/feed.png')}}" alt="RSS" height="16" width="16" class="pull-right"/></a>
       </h2>
       </div>
       <div class="panel-body">
