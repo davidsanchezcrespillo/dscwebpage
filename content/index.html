@@ -6,41 +6,49 @@ rss: blog/atom.xml
 url: index.html
 ---
 <div class="row">
-	<div class="col-md-3 panel panel-primary">
+	<div class="col-md-3 panel panel-default">
 		<div class="panel-heading">
 			<h2 class="panel-title"><span class="glyphicon glyphicon-user"></span> CV</h2>
 		</div>
 		<div class="panel-body">
-			<ul class="list-unstyled">
-			<li><a href="cv.html">100-words CV</a></li>
-			<li><a href="publications.html">Publications (1999-2002)</a></li>
-			<li><a href="masterthesis.html">My Master Thesis (2000)</a></li>
-			</ul>
+                    <div class="row">
+                       <div class="col-md-4 tile tile-first"><a href="cv.html">100 words</a></div>
+                       <div class="col-md-4 tile tile-third"><a href="publications.html">Publications</a></div>
+                       <div class="col-md-4 tile tile-second"><a href="masterthesis.html">Master Thesis</a></div>
+                    </div>
 		</div>
 	</div>
-	<div class="col-md-3 panel panel-primary">
+	<div class="col-md-3 panel panel-default">
 		<div class="panel-heading">
 			<h2 class="panel-title"><span class="glyphicon glyphicon-list-alt"></span> Development</h2>
 		</div>
 		<div class="panel-body">
-			<ul class="list-unstyled">
-				<li><a href="/labas_rytas/">Labas Rytas</a></li>
-				<li><a href="ltFeeds/">LT Feeds</a></li>
-			</ul>
+                        <div class="row">
+                           <div class="col-md-6 tile tile-third">
+                             <a href="/labas_rytas/">Labas Rytas</a>
+                           </div>
+                           <div class="col-md-6 tile tile-second">
+                             <a href="ltFeeds/">LT Feeds</a>
+                           </div>
+                        </div>
 		</div>
 	</div>
-	<div class="col-md-3 panel panel-primary">
+	<div class="col-md-3 panel panel-default">
 		<div class="panel-heading">
 			<h2 class="panel-title"><span class="glyphicon glyphicon-music"></span> Music</h2>
 		</div>
 		<div class="panel-body">
-			<ul class="list-unstyled">
-				<li><a href="kd2x3.html">KD2X3</a></li>
-				<li><a href="canciones_de_campamento.html">Canciones de Campamento 2007</a></li>
-			</ul>
+                        <div class="row">
+                           <div class="col-md-6 tile tile-first">
+                             <a href="kd2x3.html">KD2X3</a>
+                           </div>
+                           <div class="col-md-6 tile tile-second">
+                             <a href="canciones_de_campamento.html">Canciones de Campamento</a>
+                           </div>
+                        </div>
 		</div>
 	</div>
-	<div class="col-md-3 panel panel-primary">
+	<div class="col-md-3 panel panel-default">
 	  {% from "macros.j2" import render_excerpt with context %}
       <div class="panel-heading">
       <h2 class="panel-title">

@@ -108,3 +108,35 @@ img.left {
     border-bottom-width: 1px;
     border-bottom-color: #bdbdbd;
 }
+
+.tile {
+    padding: 0.2em;
+    padding-top: 1em;
+    min-height: 70px;
+    text-align: center;
+}
+
+.tile-first {
+    background-color: #94c3ea;
+}
+
+.tile-first a {
+    color: #232377;
+}
+
+.tile-second {
+    background-color: #0a5a9c;
+}
+
+.tile-second a {
+    color: #eeeeee;
+}
+
+.tile-third {
+    background-color: #2376bb;
+}
+
+.tile-third a {
+    color: #eeeeee;
+}
+

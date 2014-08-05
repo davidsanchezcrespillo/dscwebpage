@@ -26,14 +26,14 @@
         <h1>David Sánchez Crespillo</h1>
         {% from "macros.j2" import render_social_links with context %}
         {{ render_social_links() }}
-        <div class="panel panel-primary">
+        <div class="panel panel-default">
         {% from "macros.j2" import render_main_menu with context %}
         {{ render_main_menu() }}
         </div>
       </div>
       </div>
       <div class="row">
-		  <div class="col-xs-12 panel panel-primary">
+		  <div class="col-xs-12 panel">
 			<div class="panel-body">
             {% filter markdown|typogrify -%}
             {% block content %}{% endblock %}
@@ -42,7 +42,7 @@
           </div>
       </div>
       <div class="row">
-      <div class="col-xs-12 panel panel-primary">
+      <div class="col-xs-12 panel panel-default">
 		  <div class="panel-body">
             <p>Created by <a href="{{ author.url}}">{{ author.name}}</a>
             using <a href="{{ project.url }}">{{ project.name }}</a>.
