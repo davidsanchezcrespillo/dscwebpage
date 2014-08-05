@@ -58,11 +58,9 @@ url: index.html
       </div>
       <div class="panel-body">
       {% set latest = site.content.walk_resources_sorted_by_time()|first %}
-
       {% if latest -%}
       {{ render_excerpt(latest, 'post') }}
       {%- endif %}
-
       </div>
   </div>
 </div>
