@@ -1,7 +1,7 @@
 {% macro render_tile(span, class, title, url, icon) -%}
 <div class="col-md-{{ span }} tile tile-{{ class }}">
   {% if icon %}
-  <div class="tile-icon"><a href="{{ url }}" title="{{ title }}"><img src="/media/img/{{ icon }}" /></a></div>
+  <div class="tile-icon"><a href="{{ url }}" title="{{ title }}"><img src="media/img/{{ icon }}" /></a></div>
   {% endif %}
   <div class="tile-title"><a href="{{ url }}">{{ title }}</a></div>
 </div>
