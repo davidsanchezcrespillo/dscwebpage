@@ -110,10 +110,17 @@ img.left {
 }
 
 .tile {
-    padding: 0.2em;
-    padding-top: 1em;
-    min-height: 70px;
+    padding: 0.5em;
+    min-height: 100px;
     text-align: center;
+    border: solid 2px white;
+    position: relative;
+}
+
+.tile-title {
+    position: absolute;
+    bottom: 2px;
+    text-align: left;
 }
 
 .tile-first {

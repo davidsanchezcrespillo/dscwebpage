@@ -5,6 +5,8 @@ default_block: content
 rss: blog/atom.xml
 url: index.html
 ---
+{% from "macros.j2" import render_tile with context %}
+
 <div class="row">
 	<div class="col-md-3 panel panel-default">
 		<div class="panel-heading">
@@ -12,9 +14,9 @@ url: index.html
 		</div>
 		<div class="panel-body">
                     <div class="row">
-                       <div class="col-md-4 tile tile-first"><a href="cv.html">100 words</a></div>
-                       <div class="col-md-4 tile tile-third"><a href="publications.html">Publications</a></div>
-                       <div class="col-md-4 tile tile-second"><a href="masterthesis.html">Master Thesis</a></div>
+						{{ render_tile("4", "first", "100 words", "cv.html", "document.png") }}
+						{{ render_tile("4", "third", "Publications", "publications.html", "document.png") }}
+						{{ render_tile("4", "second", "Master Thesis", "masterthesis.html", "document.png") }}
                     </div>
 		</div>
 	</div>
@@ -24,12 +26,8 @@ url: index.html
 		</div>
 		<div class="panel-body">
                         <div class="row">
-                           <div class="col-md-6 tile tile-third">
-                             <a href="/labas_rytas/">Labas Rytas</a>
-                           </div>
-                           <div class="col-md-6 tile tile-second">
-                             <a href="ltFeeds/">LT Feeds</a>
-                           </div>
+							{{ render_tile("6", "third", "Labas Rytas", "/labas_rytas/", "application.png") }}
+							{{ render_tile("6", "second", "LT Feeds", "ltFeeds/", "application.png") }}
                         </div>
 		</div>
 	</div>
@@ -39,12 +37,8 @@ url: index.html
 		</div>
 		<div class="panel-body">
                         <div class="row">
-                           <div class="col-md-6 tile tile-first">
-                             <a href="kd2x3.html">KD2X3</a>
-                           </div>
-                           <div class="col-md-6 tile tile-second">
-                             <a href="canciones_de_campamento.html">Canciones de Campamento</a>
-                           </div>
+                            {{ render_tile("6", "first", "KD2X3", "kd2x3.html", "music.png") }}
+                            {{ render_tile("6", "second", "Canciones de campamento", "canciones_de_campamento.html", "music.png") }}
                         </div>
 		</div>
 	</div>

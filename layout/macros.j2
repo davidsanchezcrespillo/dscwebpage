@@ -1,3 +1,12 @@
+{% macro render_tile(span, class, title, url, icon) -%}
+<div class="col-md-{{ span }} tile tile-{{ class }}">
+  {% if icon %}
+  <div class="tile-icon"><a href="{{ url }}" title="{{ title }}"><img src="/media/img/{{ icon }}" /></a></div>
+  {% endif %}
+  <div class="tile-title"><a href="{{ url }}">{{ title }}</a></div>
+</div>
+{%- endmacro %}
+
 {% macro render_main_menu() -%}
 <ul class="nav nav-pills">
 {% for menu_item in menu -%}
@@ -92,7 +101,7 @@
 <td><audio title="{{ item.title }}" controls="controls" preload="none">
 <source src="media/audio/{{ item.url }}.mp3" type="audio/mpeg"/>
 <source src="media/audio/{{ item.url }}.ogg" type="audio/ogg"/>
-<a href="media/audio/canciones_de_campamento/{{ item.url }}.mp3">{{ item.title }}</a>
+<a href="media/audio/{{ item.url }}.mp3">{{ item.title }}</a>
 </audio></td>
 <td>
 {% if item.lyrics %}
