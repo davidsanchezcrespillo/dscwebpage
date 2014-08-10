@@ -53,6 +53,8 @@ context:
               title: KD2X3
             - url: canciones_de_campamento.html
               title: Canciones de Campamento
+            - url: retalls.html
+              title: Retalls
           - title: Blog
             url: blog/index.html
             icon: pencil

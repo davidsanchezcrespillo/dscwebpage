@@ -61,6 +61,7 @@ table.publications td.title {
     display: inline-block;
 }
 
+/*
 .tracklist {
     width: 100%;
     background-color: #FFFFFF;
@@ -70,6 +71,7 @@ table.publications td.title {
     background-color: #DDDDDD;
     text-align: left;
 }
+*/
 
 
 .picturelist li {
