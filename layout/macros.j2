@@ -1,7 +1,7 @@
 {% macro render_tile(span, class, title, url, icon) -%}
 <div class="col-md-{{ span }} tile tile-{{ class }}">
   {% if icon %}
-  <div class="tile-icon"><a href="{{ url }}" title="{{ title }}"><img src="media/img/{{ icon }}" alt=""/></a></div>
+  <div class="tile-icon"><a href="{{ url }}" title="{{ title }}"><img src="{{ media_url('img/'~icon~'') }}" alt=""/></a></div>
   {% endif %}
   <div class="tile-title"><a href="{{ url }}">{{ title }}</a></div>
 </div>
@@ -81,6 +81,17 @@
 <div class="excerpt">
 {{ post.excerpt|markdown|typogrify }}
 </div>
+{% if res.meta.tags %}
+    <ul class="list-inline">
+    {% for tag in res.meta.tags %}
+    <li>
+        <a class="small" href="{{ content_url('tags/'~tag~'.html') }}">
+            {{ tag }}
+        </a>
+    </li>
+    {% endfor %}
+    </ul>
+{% endif %}
 </article>
 {% endmacro %}
 
@@ -96,21 +107,21 @@
 <tr><th>Title</th><th>&nbsp;</th><th>&nbsp;</th><th>&nbsp;</th><th>&nbsp;</th></tr>
 {% for item in res.meta.tracklist %}
 <tr>
-<td><a href="media/audio/{{ item.url }}.mp3">{{ item.title }}</a></td>
+<td><a href="{{ media_url('audio/'~item.url~'.mp3') }}">{{ item.title }}</a></td>
 <td>{% if item.description %} {{ item.description }} {% endif %}</td>
 <td><audio title="{{ item.title }}" controls="controls" preload="none">
-<source src="media/audio/{{ item.url }}.mp3" type="audio/mpeg"/>
-<source src="media/audio/{{ item.url }}.ogg" type="audio/ogg"/>
-<a href="media/audio/{{ item.url }}.mp3">{{ item.title }}</a>
+<source src="{{ media_url('audio/'~item.url~'.mp3') }}" type="audio/mpeg"/>
+<source src="{{ media_url('audio/'~item.url~'.ogg') }}" type="audio/ogg"/>
+<a href="{{ media_url('audio/'~item.url~'.mp3') }}">{{ item.title }}</a>
 </audio></td>
 <td>
 {% if item.lyrics %}
-<a class="a-lyrics" href="media/audio/{{ item.lyrics }}" title="Lyrics"></a>
+<a class="a-lyrics" href="{{ media_url('audio/'~item.lyrics~'') }}" title="Lyrics"></a>
 {% endif %}
 </td>
 <td>
 {% if item.score %}
-<a class="a-score" href="media/audio/{{ item.score }}" title="Score"></a>
+<a class="a-score" href="{{ media_url('audio/'~item.score~'') }}" title="Score"></a>
 {% endif %}
 </td>
 </tr>
