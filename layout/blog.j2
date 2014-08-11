@@ -16,7 +16,8 @@
  js.src = "//connect.facebook.net/en_GB/all.js#xfbml=1";
  fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));</script>
-<article class="post">
+<article class="post panel panel-default">
+<div class="panel-body">
 <header class="postheader">
 <h1>
 <a href="{{ content_url(resource.url) }}">
@@ -73,12 +74,17 @@
 {% endfor %}
 {% endif %}
 </ul>
+<hr />
+<div class="well well-default">
+{{ resource.meta.description|markdown|typogrify }}
+</div>
 
 {% filter markdown|typogrify -%}
 {% mark post -%}
 {% block post -%}{%- endblock %}
 {%- endmark %}
 {%- endfilter %}
+</div>
 </div>
 </article>
 {%- endblock %}	
