@@ -68,11 +68,11 @@
   </li>
   {% if resource.meta.tags %}
   {% for tag in resource.meta.tags %}
-    <li class="active">
+  <li class="active">
       <a class="small" href="{{ content_url('tags/'~tag~'.html') }}">
         {{ tag }}
       </a>
-    </li>
+  </li>
   {% endfor %}
   {% endif %}
 </ul>

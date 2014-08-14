@@ -47,25 +47,25 @@
 
 
 {% macro render_tags(resroot) %}
-  {% set cloud = [] %}
-  {% for res in resroot.node.walk_resources_sorted_by_time() %}
-    {% if res.meta.tags %}
-    {% for tag in res.meta.tags %}
-      {% if not tag in cloud %}
-        {% do cloud.append(tag) %}
-      {% endif %}
-    {% endfor %}
-    {% endif %}
-  {% endfor %}
-  <ul class="nav nav-pills">
-  {% for word in cloud %}
-    <li class="active">
-    <a class="small" href="{{ content_url('tags/'~word~'.html') }}">
-    {{ word }}
-    </a>
-    </li>
-  {% endfor %}
-  </ul>
+{% set cloud = [] %}
+{% for res in resroot.node.walk_resources_sorted_by_time() %}
+{% if res.meta.tags %}
+{% for tag in res.meta.tags %}
+{% if not tag in cloud %}
+{% do cloud.append(tag) %}
+{% endif %}
+{% endfor %}
+{% endif %}
+{% endfor %}
+<ul class="nav nav-pills">
+{% for word in cloud %}
+  <li class="active">
+  <a class="small" href="{{ content_url('tags/'~word~'.html') }}">
+  {{ word }}
+  </a>
+  </li>
+{% endfor %}
+</ul>
 {% endmacro %}
 
 

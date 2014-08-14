@@ -2,9 +2,11 @@
 
 {% from "macros.j2" import render_excerpt with context %}
 
+{% block title %}{{ tag.name }} - David Sánchez Crespillo{% endblock %}
+
 {% block content %}
-<section class="archives">
-<h1 class="tag title">{{ tag.name }}</h1>
+<section>
+<h1>{{ tag.name }}</h1>
 <ul class="list-unstyled">
 {% for resource in walker() -%}
 <li>

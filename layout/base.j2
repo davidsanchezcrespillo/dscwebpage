@@ -2,7 +2,7 @@
 <html lang="en">
     <head>
         <meta charset="utf-8" />
-        <title>{{ resource.meta.title }} - David Sánchez Crespillo</title>
+        <title>{% block title %}{{ resource.meta.title }} - David Sánchez Crespillo{% endblock %}</title>
         <meta name="description" content="David Sánchez Crespillo - Personal web site" />
         <meta property="og:title" content="{{ resource.meta.title_ending }} - David Sánchez Crespillo" />
         <meta property="og:description" content="{{ resource.meta.title_ending }} - David Sánchez Crespillo" />

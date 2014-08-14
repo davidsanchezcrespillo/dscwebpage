@@ -1,4 +1,3 @@
-{% from "macros.j2" import render_excerpt, render_post with context %}
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
     <title>
@@ -28,7 +27,7 @@
             <published>{{ res.meta.created|xmldatetime }}</published>
             <id>{{ content_url(res.url) }}</id>
             {% for tag in res.meta.1 %}
-            <category   scheme="{{ content_url('tags') }}"
+              <category   scheme="{{ content_url('tags') }}"
                         term="{{tag}}"
                         label="{{ tag|title }}" />
             {% endfor %}
