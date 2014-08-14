@@ -3,6 +3,7 @@
 
 # Ignore results
 deploy/*
+content/tags/*
 
 # Ignore Emacs backup files
 *.html~ 
