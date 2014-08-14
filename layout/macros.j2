@@ -7,6 +7,7 @@
 </div>
 {%- endmacro %}
 
+
 {% macro render_main_menu() -%}
 <ul class="nav nav-pills">
 {% for menu_item in menu -%}
@@ -31,6 +32,7 @@
 </ul>
 {%- endmacro %}
 
+
 {% macro render_social_links() -%}
 <ul class="list-inline">
 {% for social_item in social -%}
@@ -43,29 +45,29 @@
 </ul>
 {%- endmacro %}
 
+
 {% macro render_tags(resroot) %}
-{% set cloud = [] %}
-{% for res in resroot.node.walk_resources_sorted_by_time() %}
-{% if res.meta.tags %}
-{% for tag in res.meta.tags %}
-{% if not tag in cloud %}
-{% do cloud.append(tag) %}
-{% endif %}
-{% endfor %}
-{% endif %}
-{% endfor %}
-
-<ul class="nav nav-pills">
-{% for word in cloud %}
-<li class="active">
-<a class="small" href="{{ content_url('tags/'~word~'.html') }}">
-{{ word }}
-</a>
-</li>
-{% endfor %}
-</ul>
-
+  {% set cloud = [] %}
+  {% for res in resroot.node.walk_resources_sorted_by_time() %}
+    {% if res.meta.tags %}
+    {% for tag in res.meta.tags %}
+      {% if not tag in cloud %}
+        {% do cloud.append(tag) %}
+      {% endif %}
+    {% endfor %}
+    {% endif %}
+  {% endfor %}
+  <ul class="nav nav-pills">
+  {% for word in cloud %}
+    <li class="active">
+    <a class="small" href="{{ content_url('tags/'~word~'.html') }}">
+    {{ word }}
+    </a>
+    </li>
+  {% endfor %}
+  </ul>
 {% endmacro %}
+
 
 {% macro render_excerpt(res, class=None) %}
 {% refer to res.url as post %}
@@ -96,37 +98,40 @@
 </article>
 {% endmacro %}
 
+
 {% macro render_keywords(res) %}
 {% if res.meta.keywords %}
-<meta name="keywords" content="{{ res.meta.keywords }}" />
+  <meta name="keywords" content="{{ res.meta.keywords }}" />
 {% endif %}
 {% endmacro %}
 
+
 {% macro render_audioplayer(res) %}
-{% if res.meta.tracklist %}
-<table class="table table-striped table-condensed">
-<tr><th>Title</th><th>&nbsp;</th><th>&nbsp;</th><th>&nbsp;</th><th>&nbsp;</th></tr>
-{% for item in res.meta.tracklist %}
-<tr>
-<td><a href="{{ media_url('audio/'~item.url~'.mp3') }}">{{ item.title }}</a></td>
-<td>{% if item.description %} {{ item.description }} {% endif %}</td>
-<td><audio title="{{ item.title }}" controls="controls" preload="none">
-<source src="{{ media_url('audio/'~item.url~'.mp3') }}" type="audio/mpeg"/>
-<source src="{{ media_url('audio/'~item.url~'.ogg') }}" type="audio/ogg"/>
-<a href="{{ media_url('audio/'~item.url~'.mp3') }}">{{ item.title }}</a>
-</audio></td>
-<td>
-{% if item.lyrics %}
-<a class="a-lyrics" href="{{ media_url('audio/'~item.lyrics~'') }}" title="Lyrics"></a>
-{% endif %}
-</td>
-<td>
-{% if item.score %}
-<a class="a-score" href="{{ media_url('audio/'~item.score~'') }}" title="Score"></a>
-{% endif %}
-</td>
-</tr>
-{% endfor %}
-</table>
-{% endif %}
+  {% if res.meta.tracklist %}
+  <table class="table table-striped table-condensed">
+  <tr><th>Title</th><th>&nbsp;</th><th>&nbsp;</th><th>&nbsp;</th><th>&nbsp;</th></tr>
+  {% for item in res.meta.tracklist %}
+    <tr>
+    <td><a href="{{ media_url('audio/'~item.url~'.mp3') }}">{{ item.title }}</a></td>
+    <td>{% if item.description %} {{ item.description }} {% endif %}</td>
+    <td><audio title="{{ item.title }}" controls="controls" preload="none">
+      <source src="{{ media_url('audio/'~item.url~'.mp3') }}" type="audio/mpeg"/>
+      <source src="{{ media_url('audio/'~item.url~'.ogg') }}" type="audio/ogg"/>
+      <a href="{{ media_url('audio/'~item.url~'.mp3') }}">{{ item.title }}</a>
+      </audio>
+    </td>
+    <td>
+    {% if item.lyrics %}
+      <a class="a-lyrics" href="{{ media_url('audio/'~item.lyrics~'') }}" title="Lyrics"></a>
+    {% endif %}
+    </td>
+    <td>
+    {% if item.score %}
+      <a class="a-score" href="{{ media_url('audio/'~item.score~'') }}" title="Score"></a>
+    {% endif %}
+    </td>
+  </tr>
+  {% endfor %}
+  </table>
+  {% endif %}
 {% endmacro %}
