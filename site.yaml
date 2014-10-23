@@ -18,7 +18,7 @@ context:
         rss: blog/atom.xml
         author:
             name: David Sánchez Crespillo
-            url: "http://sanchezcrespillo.net/david"
+            url: "http://sanchezcrespillo.info/david"
         project:
             name: Hyde
             url: "http://hyde.github.com"
@@ -83,7 +83,12 @@ context:
           - title: StackOverflow
             url: http://stackoverflow.com/users/224368/dinopmi
             image: img/stackoverflow.png
-
+          - title: HTML5
+            url: http://validator.w3.org/check?uri=referer
+            image: img/html5_valid.png
+          - title: Made with Hyde
+            url: http://hyde.github.com
+            image: img/hyde.png
 meta:
     nodemeta: meta.yaml
     created: !!timestamp 2010-01-01 00:00:00
