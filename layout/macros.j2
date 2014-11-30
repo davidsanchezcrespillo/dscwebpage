@@ -14,7 +14,7 @@
     <li class="{% if menu_item.url == resource.url %}active{% endif %}{% if menu_item.items %}dropdown{% endif %}">
     <a href="{{ content_url(menu_item.url) }}" {% if menu_item.items %}class="dropdown-toggle" data-toggle="dropdown"{% endif %}>
     {% if menu_item.icon %}<span class="glyphicon glyphicon-{{ menu_item.icon }}"></span>{% endif %} 
-    {{ menu_item.title }}{% if menu_item.items %}<span class="caret"></span>{% endif %}
+    {{ menu_item.title }}{% if menu_item.items %}&nbsp;<span class="caret"></span>{% endif %}
     </a>
     {% if menu_item.items %}
     <ul class="dropdown-menu" role="menu">
@@ -38,7 +38,7 @@
 {% for social_item in social -%}
 <li>
 <a href="{{ social_item.url }}" title="{{ social_item.title }}">
-<img src="{{ media_url(social_item.image) }}" title="{{ social_item.title }}"  alt="{{ social_item.title }}" height="32" width="32" />
+<img src="{{ media_url(social_item.image) }}" title="{{ social_item.title }}"  alt="{{ social_item.title }}" height="48" width="48" />
 </a>
 </li>
 {%- endfor %}

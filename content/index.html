@@ -7,51 +7,57 @@ url: index.html
 ---
 {% from "macros.j2" import render_tile with context %}
 
+
 <div class="row">
-	<div class="col-md-3 panel panel-default">
-		<div class="panel-heading">
-			<h2 class="panel-title"><span class="glyphicon glyphicon-user"></span> CV</h2>
-		</div>
-		<div class="panel-body">
+    <div class="col-md-4 panel panel-default">
+        <div class="panel-heading">
+            <h2 class="panel-title">CV</h2>
+        </div>
+        <div class="panel-body">
                     <div class="row">
-						{{ render_tile("12", "first", "100 words", "cv.html", "document.png") }}
-				    </div>
-				    <div class="row">
-						{{ render_tile("6", "third", "Publications", "publications.html", "document.png") }}
-						{{ render_tile("6", "second", "Master Thesis", "masterthesis.html", "document.png") }}
+                        {{ render_tile("12", "first", "100 words", "cv.html", "document.png") }}
                     </div>
-		</div>
-	</div>
-	<div class="col-md-3 panel panel-default">
-		<div class="panel-heading">
-			<h2 class="panel-title"><span class="glyphicon glyphicon-file"></span> Development</h2>
-		</div>
-		<div class="panel-body">
+                    <div class="row">
+                        {{ render_tile("6", "third", "Publications", "publications.html", "document.png") }}
+                        {{ render_tile("6", "second", "Master Thesis", "masterthesis.html", "document.png") }}
+                    </div>
+        </div>
+    </div>
+    <div class="col-md-4 panel panel-default">
+        <div class="panel-heading">
+            <h2 class="panel-title">Development</h2>
+        </div>
+        <div class="panel-body">
                         <div class="row">
-							{{ render_tile("6", "third", "Labas Rytas", "/labas_rytas/", "drupal.png") }}
-							{{ render_tile("6", "second", "LT Feeds", "ltFeeds/", "angular.png") }}
+                            {{ render_tile("12", "second", "LTWords", "ltWords/web/index", "silex.png") }}
                         </div>
-		</div>
-	</div>
-	<div class="col-md-3 panel panel-default">
-		<div class="panel-heading">
-			<h2 class="panel-title"><span class="glyphicon glyphicon-music"></span> Music</h2>
-		</div>
-		<div class="panel-body">
                         <div class="row">
-							{{ render_tile("12", "third", "Retalls", "retalls.html", "retalls.gif") }}
+                            {{ render_tile("6", "third", "Labas Rytas", "/labas_rytas/", "drupal.png") }}
+                            {{ render_tile("6", "first", "LT Feeds", "ltFeeds/", "angular.png") }}
+                        </div>
+        </div>
+    </div>
+    <div class="col-md-4 panel panel-default">
+        <div class="panel-heading">
+            <h2 class="panel-title">Music</h2>
+        </div>
+        <div class="panel-body">
+                        <div class="row">
+                            {{ render_tile("12", "third", "Retalls", "retalls.html", "retalls.gif") }}
                         </div>
                         <div class="row">
                             {{ render_tile("6", "first", "KD2X3", "kd2x3.html", "microphone.png") }}
                             {{ render_tile("6", "second", "Canciones de campamento", "canciones_de_campamento.html", "orange-tent.png") }}
                         </div>
-		</div>
-	</div>
-	<div class="col-md-3 panel panel-default">
-	  {% from "macros.j2" import render_excerpt with context %}
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-12 panel panel-default">
+      {% from "macros.j2" import render_excerpt with context %}
       <div class="panel-heading">
       <h2 class="panel-title">
-      <span class="glyphicon glyphicon-pencil"></span> Latest blog post
+      Latest blog post
       <a href="{{ content_url( resource.meta.rss ) }}"><img src="{{ media_url('img/feed.png')}}" alt="RSS" height="16" width="16" class="pull-right"/></a>
       </h2>
       </div>

@@ -26,9 +26,7 @@ context:
         menu:
           - title: Home
             url: index.html
-            icon: home
           - title: CV
-            icon: user
             url: "#"
             items:
             - url: cv.html
@@ -38,16 +36,16 @@ context:
             - url: masterthesis.html
               title: Master Thesis
           - title: Development
-            icon: file
             url: "#"
             items:
+            - title: LT Words
+              url: ltWords/web/index
             - title: Labas Rytas
               url: /labas_rytas/
             - title: LT Feeds
               url: ltFeeds/
           - title: Music
             url: "#"
-            icon: music
             items:
             - url: kd2x3.html
               title: KD2X3
@@ -57,7 +55,6 @@ context:
               title: Retalls
           - title: Blog
             url: blog/index.html
-            icon: pencil
         social:
           - title: LinkedIn
             url: http://www.linkedin.com/in/davidsanchezcrespillo
