@@ -2,6 +2,7 @@
 {% from "macros.j2" import render_excerpt with context  %}
 {% from "macros.j2" import render_tags with context  %}
 
+
 {% block content %}
 {% block page_title %}<h1>{{ resource.meta.title }}</h1>{% endblock %}
 <p>
@@ -9,13 +10,13 @@
 </p>
 {{ render_tags(resource) }}
 <hr />
+<div>
 <ul class="list-unstyled">
 {% for res in resource.node.walk_resources_sorted_by_time() %}
 <li class="panel panel-default">
-    <div class="panel-body">
-    {{ render_excerpt(res) }}
-    </div>
+<div class="panel-body">{{ render_excerpt(res) }}</div>
 </li>
 {% endfor %}
 </ul>
+</div>
 {% endblock %}

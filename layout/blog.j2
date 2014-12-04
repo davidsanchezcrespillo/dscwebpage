@@ -17,20 +17,9 @@
  fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));</script>
 
-<article class="post panel panel-default">
-<div class="panel-body">
+<article class="post">
+<div class="">
 <header class="postheader">
-  <h1>
-  <a href="{{ content_url(resource.url) }}">
-        {{ resource.meta.title }}
-  </a>
-  <small>
-    <time datetime="{{ resource.meta.created.strftime('%Y-%m-%d') }}">
-    {{ resource.meta.created.strftime('%a, %d %b %Y') }}
-    </time>
-  </small>
-  </h1>
-
 <ul class="nav nav-pills">
   <li>
     <div class="g-plusone" data-annotation="none"></div>
@@ -42,10 +31,43 @@
   <li>
     <div class="fb-like" data-send="false" data-layout="button_count" data-width="350" data-show-faces="false"></div>
   </li>
+  {% if resource.meta.tags %}
+  {% for tag in resource.meta.tags %}
+  <li class="">
+      <a class="small" href="{{ content_url('tags/'~tag~'.html') }}">
+        {{ tag }}
+      </a>
+  </li>
+  {% endfor %}
+  {% endif %}
 </ul>
+  <h1>
+  <a href="{{ content_url(resource.url) }}">
+        {{ resource.meta.title }}
+  </a>
+  <small>
+    <time datetime="{{ resource.meta.created.strftime('%Y-%m-%d') }}">
+    {{ resource.meta.created.strftime('%a, %d %b %Y') }}
+    </time>
+  </small>
+  </h1>
+
 </header>
 
 <div class="postdetails">
+<div class="well well-default">
+{{ resource.meta.description|markdown|typogrify }}
+</div>
+
+{% filter markdown|typogrify -%}
+{% mark post -%}
+{% block post -%}{%- endblock %}
+{%- endmark %}
+{%- endfilter %}
+
+<hr/>
+<div class="row">
+<div class="col-md-12">
 <ul class="nav nav-pills">
   <li>
     <a href="{{ content_url( resource.meta.rss ) }}"><img src="{{ media_url('img/feed.png')}}" alt="RSS" height="16" width="16"/></a>
@@ -66,27 +88,10 @@
       Later
     </a> 
   </li>
-  {% if resource.meta.tags %}
-  {% for tag in resource.meta.tags %}
-  <li class="active">
-      <a class="small" href="{{ content_url('tags/'~tag~'.html') }}">
-        {{ tag }}
-      </a>
-  </li>
-  {% endfor %}
-  {% endif %}
 </ul>
-<hr />
-<div class="well well-default">
-{{ resource.meta.description|markdown|typogrify }}
 </div>
-
-{% filter markdown|typogrify -%}
-{% mark post -%}
-{% block post -%}{%- endblock %}
-{%- endmark %}
-{%- endfilter %}
+</div>
 </div>
 </div>
 </article>
-{%- endblock %}	
+{%- endblock %} 

@@ -81,23 +81,20 @@
 </time>
 </small>
 </h4>
-<div class="excerpt">
-{{ res.meta.description }}
-</div>
+<div class="excerpt">{{ res.meta.description }}</div>
 {% if res.meta.tags %}
 <ul class="list-inline">
-    {% for tag in res.meta.tags %}
-    <li>
-        <a class="small" href="{{ content_url('tags/'~tag~'.html') }}">
-            {{ tag }}
-        </a>
-    </li>
-    {% endfor %}
+{% for tag in res.meta.tags %}
+<li>
+<a class="small" href="{{ content_url('tags/'~tag~'.html') }}">
+{{ tag }}
+</a>
+</li>
+{% endfor %}
 </ul>
 {% endif %}
 </article>
 {% endmacro %}
-
 
 {% macro render_keywords(res) %}
 {% if res.meta.keywords %}
@@ -107,7 +104,7 @@
 
 
 {% macro render_audioplayer(res) %}
-  {% if res.meta.tracklist %}
+{% if res.meta.tracklist %}
 <table class="table table-striped table-condensed">
   <tr><th>Title</th><th>&nbsp;</th><th>&nbsp;</th><th>&nbsp;</th><th>&nbsp;</th></tr>
   {% for item in res.meta.tracklist %}
@@ -132,6 +129,6 @@
     </td>
   </tr>
   {% endfor %}
-  </table>
-  {% endif %}
+</table>
+{% endif %}
 {% endmacro %}
