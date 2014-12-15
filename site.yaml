@@ -26,15 +26,6 @@ context:
         menu:
           - title: Home
             url: index.html
-          - title: CV
-            url: "#"
-            items:
-            - url: cv.html
-              title: 100 Words
-            - url: publications.html
-              title: Publications
-            - url: masterthesis.html
-              title: Master Thesis
           - title: Development
             url: "#"
             items:
@@ -53,6 +44,15 @@ context:
               title: Canciones de Campamento
             - url: retalls.html
               title: Retalls
+          - title: CV
+            url: "#"
+            items:
+            - url: cv.html
+              title: 100 Words
+            - url: publications.html
+              title: Publications
+            - url: masterthesis.html
+              title: Master Thesis
           - title: Blog
             url: blog/index.html
         social:
