@@ -5,8 +5,8 @@
         <title>{% block title %}{{ resource.meta.title }} - David Sánchez Crespillo{% endblock %}</title>
         <meta name="description" content="David Sánchez Crespillo - Personal web site" />
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta property="og:title" content="{{ resource.meta.title_ending }} - David Sánchez Crespillo" />
-        <meta property="og:description" content="{{ resource.meta.title_ending }} - David Sánchez Crespillo" />
+        <meta property="og:title" content="{{ resource.meta.title }}" />
+        <meta property="og:description" content="{{ resource.meta.title }}" />
         <meta property="og:image" content="http://sanchezcrespillo.info{{ media_url('img/blanque.png') }}" />
         {% from "macros.j2" import render_keywords with context %}
         {{ render_keywords(resource) }}
