@@ -45,14 +45,7 @@ context:
             - url: retalls.html
               title: Retalls
           - title: CV
-            url: "#"
-            items:
-            - url: cv.html
-              title: 100 Words
-            - url: publications.html
-              title: Publications
-            - url: masterthesis.html
-              title: Master Thesis
+            url: cv.html
           - title: Blog
             url: blog/index.html
         social:
