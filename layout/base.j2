@@ -23,11 +23,13 @@
     <div style="padding:0 15px;">
       <div class="row">
       <div class="col-xs-12">
-        <img class="pull-right" src="{{ media_url('img/blanque.png') }}" alt="Photo" width="96" height="96" />
-        <h1>David Sánchez Crespillo</h1>
-        <div class="panel panel-default">
+        <div class="">
+        <img class="" src="{{ media_url('img/blanque.png') }}" alt="Photo" width="96" height="96" />
+        <span class="title">David Sánchez Crespillo</strong></span>
+        <!--<div class="panel panel-default">-->
         {% from "macros.j2" import render_main_menu with context %}
         {{ render_main_menu() }}
+        <!--</div>-->
         </div>
       </div>
       </div>

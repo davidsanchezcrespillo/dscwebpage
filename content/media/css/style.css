@@ -147,3 +147,9 @@ h2.panel-title {
     font-weight: bold;
     color: #666666;
 }
+
+.title {
+    font-size: 1.6em;
+    vertical-align: top;
+}
+
