@@ -1,9 +1,13 @@
 {% macro render_tile(span, class, title, url, icon) -%}
-<div class="col-md-{{ span }} tile tile-{{ class }}">
-  {% if icon %}
-  <div class="tile-icon"><a href="{{ url }}" title="{{ title }}"><img src="{{ media_url('img/'~icon~'') }}" alt=""/></a></div>
-  {% endif %}
-  <div class="tile-title"><a href="{{ url }}">{{ title }}</a></div>
+<div class="col-sm-{{ span }} tile tile-{{ class }}">
+  <a href="{{ url }}">
+  <figure class="tile-figure">
+    <div>
+      <img src="{{ media_url('img/'~icon~'') }}" alt=""/>
+      <figcaption class="tile-caption">{{ title }}</figcaption>
+    </div>
+  </figure>
+  </a>
 </div>
 {%- endmacro %}
 

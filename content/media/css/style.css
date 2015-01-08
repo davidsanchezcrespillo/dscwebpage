@@ -1,3 +1,19 @@
+/** Improving the contrast a little bit */
+
+a {
+    color: #024b8a;
+}
+
+.btn-primary {
+    background-color: #024b8a;
+}
+
+.nav-pills > li.active > a, .nav-pills > li.active > a:hover, .nav-pills > li.active > a:focus {
+    background-color: #024b8a;
+}
+
+/********/
+
 a.backlink:before{
     content: '\2190';
 }
@@ -20,18 +36,6 @@ a.next:after{
     border-style: solid;
     border-width: 1px;
     border-color: #bdbdbd;
-}
-
-ul.cloud {
-    margin-left: 0;
-    border-style: solid;
-    border-width: 1px;
-    border-color: #bdbdbd;
-}
-
-ul.cloud li {
-    list-style-type: none;
-    display: inline-block;
 }
 
 table.publications {
@@ -61,17 +65,6 @@ table.publications td.title {
     display: inline-block;
 }
 
-.picturelist li {
-    background-color: #FFFFFF;
-    list-style-type: none;
-    width: 30%;
-    border-style: solid;
-    border-color: #AAAAAA;
-    border-width: 1px;
-    display: inline-block;
-    margin-bottom: 0.2em;
-}
-
 .a-download {
     display: inline-block;
     height: 32px;
@@ -93,11 +86,6 @@ table.publications td.title {
     background-image: url('../img/icon-score.png');
 }
 
-img.left {
-    float: left;
-    margin-right: 10px;
-}
-
 .listing article {
     border-bottom-style: solid;
     border-bottom-width: 1px;
@@ -112,11 +100,26 @@ img.left {
     position: relative;
 }
 
-.tile-title {
+tile-figure {
+    position: relative;
+}
+
+.tile img {
+    max-width: 100%;
+}
+
+.tile-caption {
     position: absolute;
-    bottom: 2px;
-    text-align: left;
     font-size: 1.2em;
+    
+    right: 0; bottom: 0; left: 0;
+    
+    background: black; /* fallback */
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#bb000000, endColorstr=#bb000000); /* IE fix */
+    background: rgba(0,0,0,.7); /* transparent background */  
+    color: #fff; 
+  
+    padding: 10px;    /* padding around text */    
 }
 
 .tile-first {

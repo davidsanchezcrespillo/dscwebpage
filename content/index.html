@@ -9,38 +9,34 @@ url: index.html
 
 
 <div class="row">
-    <div class="col-md-6 panel panel-default">
+    <div class="col-sm-6 panel panel-default">
         <div class="panel-heading">
             <h2 class="panel-title">Development</h2>
         </div>
         <div class="panel-body">
                         <div class="row">
-                            {{ render_tile("12", "second", "LTWords", "ltWords/web/index", "silex.png") }}
-                        </div>
-                        <div class="row">
-                            {{ render_tile("6", "third", "Labas Rytas", "/labas_rytas/", "drupal.png") }}
-                            {{ render_tile("6", "first", "LT Feeds", "ltFeeds/", "angular.png") }}
+                            {{ render_tile("4", "second", "LTWords", "ltWords/web/index", "kauno_rotuse.jpg") }}
+                            {{ render_tile("4", "third", "Labas Rytas", "/labas_rytas/", "rytas.jpg") }}
+                            {{ render_tile("4", "third", "CV", "cv.html", "old-books.jpg") }}
                         </div>
         </div>
     </div>
 
-    <div class="col-md-6 panel panel-default">
+    <div class="col-sm-6 panel panel-default">
         <div class="panel-heading">
             <h2 class="panel-title">Music</h2>
         </div>
         <div class="panel-body">
                         <div class="row">
-                            {{ render_tile("12", "third", "Retalls", "retalls.html", "retalls.png") }}
-                        </div>
-                        <div class="row">
-                            {{ render_tile("6", "first", "KD2X3", "kd2x3.html", "microphone.png") }}
-                            {{ render_tile("6", "second", "Canciones de campamento", "canciones_de_campamento.html", "orange-tent.png") }}
+                            {{ render_tile("4", "third", "Retalls", "retalls.html", "patchwork.jpg") }}
+                            {{ render_tile("4", "first", "KD2X3", "kd2x3.html", "microphone.jpg") }}
+                            {{ render_tile("4", "second", "Canciones de campamento", "canciones_de_campamento.html", "fuegoCampamento.jpg") }}
                         </div>
         </div>
     </div>
 </div>
 <div class="row">
-    <div class="col-md-12 panel panel-default">
+    <div class="col-sm-12 panel panel-default">
       {% from "macros.j2" import render_excerpt with context %}
       <div class="panel-heading">
       <h2 class="panel-title">
