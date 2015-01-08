@@ -26,13 +26,12 @@
         <div class="">
         <a href="index.html" title="Home"><img class="" src="{{ media_url('img/blanque.png') }}" alt="" width="96" height="96" /></a>
         <span class="title"><a href="index.html" title="Home">David Sánchez Crespillo</a></span>
-        <!--<div class="panel panel-default">-->
         {% from "macros.j2" import render_main_menu with context %}
         {{ render_main_menu() }}
-        <!--</div>-->
+        </div>
       </div>
-      </div>
-      <div class="row">
+    </div>
+    <div class="row">
           <div class="col-xs-12 panel">
 <div class="panel-body">
             {% filter markdown|typogrify -%}

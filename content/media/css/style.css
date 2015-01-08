@@ -93,10 +93,10 @@ table.publications td.title {
 }
 
 .tile {
-    padding: 0.5em;
+    padding: 0;
     min-height: 100px;
     text-align: center;
-    border: solid 2px white;
+    border: solid 1px #bbbbbb;
     position: relative;
 }
 
@@ -120,30 +120,6 @@ tile-figure {
     color: #fff; 
   
     padding: 10px;    /* padding around text */    
-}
-
-.tile-first {
-    background-color: #94c3ea;
-}
-
-.tile-first a {
-    color: #232377;
-}
-
-.tile-second {
-    background-color: #0a5a9c;
-}
-
-.tile-second a {
-    color: #eeeeee;
-}
-
-.tile-third {
-    background-color: #2376bb;
-}
-
-.tile-third a {
-    color: #eeeeee;
 }
 
 h2.panel-title {
