@@ -24,8 +24,6 @@ context:
             url: "http://hyde.github.com"
             install: "http://hyde.github.com/install.html"
         menu:
-          - title: Home
-            url: index.html
           - title: Development
             url: "#"
             items:
