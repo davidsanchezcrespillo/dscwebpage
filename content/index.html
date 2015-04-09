@@ -9,7 +9,8 @@ url: index.html
 
 
 <div class="row">
-    <div class="col-sm-6 panel panel-default">
+  <div class="col-sm-6">
+    <div class="panel panel-default">
         <div class="panel-heading">
             <h2 class="panel-title">Development</h2>
         </div>
@@ -21,8 +22,10 @@ url: index.html
                         </div>
         </div>
     </div>
+  </div>
 
-    <div class="col-sm-6 panel panel-default">
+  <div class="col-sm-6">
+    <div class="panel panel-default">
         <div class="panel-heading">
             <h2 class="panel-title">Music</h2>
         </div>
@@ -34,9 +37,11 @@ url: index.html
                         </div>
         </div>
     </div>
+  </div>
 </div>
 <div class="row">
-    <div class="col-sm-12 panel panel-default">
+  <div class="col-sm-12">
+    <div class="panel panel-default">
       {% from "macros.j2" import render_excerpt with context %}
       <div class="panel-heading">
       <h2 class="panel-title">
@@ -50,5 +55,6 @@ url: index.html
       {{ render_excerpt(latest, 'post') }}
       {%- endif %}
       </div>
+    </div>
   </div>
 </div>
