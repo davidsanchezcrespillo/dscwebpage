@@ -75,7 +75,6 @@
 {% refer to res.url as post %}
 <article {{'class='~class if class }}>
 <h4>
-<span class="glyphicon glyphicon-file"></span> 
 <a href="{{ content_url(res.url) }}">{{ res.meta.title }}</a>
 <small>
 <time class="text-muted" datetime="{{ res.meta.created.strftime('%Y-%m-%d') }}">
@@ -88,9 +87,7 @@
 <ul class="list-inline">
 {% for tag in res.meta.tags %}
 <li>
-<a class="small" href="{{ content_url('tags/'~tag~'.html') }}">
-{{ tag }}
-</a>
+<a class="small" href="{{ content_url('tags/'~tag~'.html') }}">{{ tag }}</a>
 </li>
 {% endfor %}
 </ul>
