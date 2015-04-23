@@ -1,35 +1,23 @@
 {% extends "base.j2" %}
 {% block content -%}
-<script type="text/javascript">
- (function() {
-   var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
-   po.src = 'https://apis.google.com/js/plusone.js';
-   var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
- })();
-</script>
-
-<div id="fb-root"></div>
-<script>(function(d, s, id) {
- var js, fjs = d.getElementsByTagName(s)[0];
- if (d.getElementById(id)) return;
- js = d.createElement(s); js.id = id;
- js.src = "//connect.facebook.net/en_GB/all.js#xfbml=1";
- fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));</script>
-
 <article class="post">
 <div class="">
 <header class="postheader">
 <ul class="nav nav-pills">
   <li>
-    <div class="g-plusone" data-annotation="none"></div>
+    <a href="https://plus.google.com/share?url=http%3a%2f%2fsanchezcrespillo.info{{ content_url(resource.url) }}">
+      <img src="{{ media_url('img/googleplus_32.png') }}" alt="Share on Google+" />
+    </a>
   </li>
   <li>
-    <a href="https://twitter.com/share" class="twitter-share-button">Tweet</a>
-    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+    <a href="https://twitter.com/intent/tweet?text=David%20Sánchez%20Crespillo&url=http://sanchezcrespillo.info{{ content_url(resource.url) }}">
+      <img src="{{ media_url('img/twitter_32.png') }}" alt="Share on Twitter" />
+    </a>
   </li>
   <li>
-    <div class="fb-like" data-send="false" data-layout="button_count" data-width="350" data-show-faces="false"></div>
+    <a href="https://www.facebook.com/sharer/sharer.php?u=http://sanchezcrespillo.info{{ content_url(resource.url) }}">
+      <img src="{{ media_url('img/facebook_32.png') }}" alt="Share on Facebook" />
+    </a>
   </li>
   {% if resource.meta.tags %}
   {% for tag in resource.meta.tags %}
