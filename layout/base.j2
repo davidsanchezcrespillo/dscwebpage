@@ -20,14 +20,15 @@
         <![endif]-->
     </head>
     <body>
+    <div class="container">
     <div style="padding:0 15px;">
       <div class="row">
       <div class="col-md-1">
         <a href="{{ content_url('index.html') }}" title="Home"><img src="{{ media_url('img/blanque.png') }}" alt="" /></a>
       </div>
-      <div class="col-md-5">
-        &nbsp;
+      <div class="col-md-5" style="padding-left: 35px;">
         <span class="title"><a href="{{ content_url('index.html') }}" title="Home">David Sánchez Crespillo</a></span>
+        <div>Personal site</div>
       </div>
       <div class="col-md-6">
         {% from "macros.j2" import render_main_menu with context %}
@@ -52,7 +53,8 @@
           </div>
       </div>
     </div>
-    <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
-    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+  </div>
+  <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
   </body>
 </html>
