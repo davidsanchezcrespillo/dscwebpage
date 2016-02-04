@@ -31,8 +31,6 @@ context:
               url: ltWords/web/index
             - title: Labas Rytas
               url: /labas_rytas/
-            - title: LT Feeds
-              url: ltFeeds/
           - title: Music
             url: "#"
             items:

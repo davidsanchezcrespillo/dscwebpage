@@ -40,22 +40,4 @@ url: index.html
     </div>
   </div>
 </div>
-<div class="row">
-  <div class="col-sm-12">
-    <div class="panel panel-default">
-      {% from "macros.j2" import render_excerpt with context %}
-      <div class="panel-heading">
-      <h2 class="panel-title">
-      Latest blog post
-      <a href="{{ content_url( resource.meta.rss ) }}"><img src="{{ media_url('img/feed.png')}}" alt="RSS" height="16" width="16" class="pull-right"/></a>
-      </h2>
-      </div>
-      <div class="panel-body">
-      {% set latest = site.content.walk_resources_sorted_by_time()|first %}
-      {% if latest -%}
-      {{ render_excerpt(latest, 'post') }}
-      {%- endif %}
-      </div>
-    </div>
-  </div>
-</div>
+
