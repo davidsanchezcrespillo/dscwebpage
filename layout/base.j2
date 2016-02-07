@@ -37,6 +37,14 @@
       </div>
     </div>
     <div class="row">
+      <div class="col-xs-12 panel">
+          <div style="padding-left:15px; padding-right:15px;">
+            {% from "macros.j2" import render_social_links with context %}
+            {{ render_social_links() }}
+          </div>
+      </div>
+    </div>
+    <div class="row">
           <div class="col-xs-12 panel">
 <div class="panel-body">
             {% filter markdown|typogrify -%}
@@ -44,10 +52,10 @@
             {%- endfilter %}
 </div>
           </div>
-      </div>
-      <div class="row">
-      <div class="col-xs-12 panel panel-default">
-          <div class="panel-body">
+    </div>
+    <div class="row">
+      <div class="col-xs-12 panel">
+          <div style="padding-left:15px; padding-right:15px;">
             {% from "macros.j2" import render_social_links with context %}
             {{ render_social_links() }}
           </div>
