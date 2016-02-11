@@ -52,7 +52,7 @@ table.publications td {
     border-color: #AAAAAA;
 }
 
-table.publications td.title {
+table.publications td.publication-title {
     width: 200px;
     font-weight: bold;
 }
@@ -127,7 +127,7 @@ h2.panel-title {
     color: #666666;
 }
 
-.title {
+.header-title {
     font-size: 1.6em;
     vertical-align: top;
 }
