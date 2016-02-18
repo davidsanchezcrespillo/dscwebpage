@@ -51,15 +51,6 @@ context:
           - title: Facebook
             url: http://www.facebook.com/davidsanchezcrespillo
             image: img/facebook.png
-          - title: Slideshare
-            url: http://www.slideshare.net/dinopmi
-            image: img/slideshare.png
-          - title: Wikipedia
-            url: http://es.wikipedia.org/wiki/Usuario:Dinopmi
-            image: img/wikipedia.png
-          - title: Hispasonic
-            url: http://www.hispasonic.com/dinopmi
-            image: img/hispasonicos.png
           - title: Youtube
             url: http://www.youtube.com/dinopmi
             image: img/youtube.png
