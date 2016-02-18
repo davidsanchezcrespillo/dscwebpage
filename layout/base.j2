@@ -21,47 +21,47 @@
     </head>
     <body>
     <div class="container">
-    <div style="padding:0 15px; margin-bottom:15px;">
-      <div class="row">
-      <div class="col-md-1">
+
+      <div class="row" style="margin-bottom:15px;">
+        <div class="col-md-1">
         <a href="{{ content_url('index.html') }}" title="Home"><img src="{{ media_url('img/blanque.png') }}" alt="" /></a>
-      </div>
-      <div class="col-md-5" style="padding-left: 35px;">
-        <span class="header-title"><a href="{{ content_url('index.html') }}" title="Home">David Sánchez Crespillo</a></span>
-        <div>Personal site</div>
-      </div>
-      <div class="col-md-6">
+        </div>
+        <div class="col-md-5" style="padding-left: 35px;">
+          <span class="header-title"><a href="{{ content_url('index.html') }}" title="Home">David Sánchez Crespillo</a></span>
+          <div>Personal site</div>
+        </div>
+        <div class="col-md-6">
         {% from "macros.j2" import render_main_menu with context %}
         {{ render_main_menu() }}
+        </div>
       </div>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-xs-12 panel">
-          <div style="padding-left:15px; padding-right:15px;">
+
+      <div class="row">
+        <div class="col-xs-12">
+          <div>
             {% from "macros.j2" import render_social_links with context %}
             {{ render_social_links() }}
           </div>
+        </div>
       </div>
-    </div>
-    <div class="row">
-          <div class="col-xs-12 panel">
-<div class="panel-body">
+
+      <div>
             {% filter markdown|typogrify -%}
             {% block content %}{% endblock %}
             {%- endfilter %}
-</div>
-          </div>
-    </div>
-    <div class="row">
-      <div class="col-xs-12 panel">
-          <div style="padding-left:15px; padding-right:15px;">
+      </div>
+
+      <hr>
+      <div class="row">
+        <div class="col-xs-12">
+          <div>
             {% from "macros.j2" import render_social_links with context %}
             {{ render_social_links() }}
           </div>
+        </div>
       </div>
+
     </div>
-  </div>
   <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
   <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
   </body>
