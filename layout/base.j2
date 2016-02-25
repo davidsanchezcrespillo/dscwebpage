@@ -30,7 +30,7 @@
           <span class="header-title"><a href="{{ content_url('index.html') }}" title="Home">David Sánchez Crespillo</a></span>
           <div class="top-space">
             {% from "macros.j2" import render_social_links with context %}
-            {{ render_social_links() }}
+            {{ render_social_links(social) }}
           </div>        </div>
         <div class="col-md-5">
         {% from "macros.j2" import render_main_menu with context %}
@@ -53,10 +53,15 @@
 
       <hr>
       <div class="row">
-        <div class="col-xs-12">
+        <div class="col-xs-6">
           <div>
             {% from "macros.j2" import render_social_links with context %}
-            {{ render_social_links() }}
+            {{ render_social_links(social) }}
+          </div>
+        </div>
+        <div class="col-xs-6">
+          <div class="text-right">
+            {{ render_social_links(footer) }}
           </div>
         </div>
       </div>

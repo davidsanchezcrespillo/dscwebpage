@@ -60,6 +60,7 @@ context:
           - title: StackOverflow
             url: http://stackoverflow.com/users/224368/dinopmi
             image: img/stackoverflow.png
+        footer:
           - title: HTML5
             url: http://validator.w3.org/check?uri=referer
             image: img/html5_valid.png
