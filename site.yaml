@@ -31,6 +31,8 @@ context:
               url: ltWords/web/index
             - title: Labas Rytas
               url: /labas_rytas/
+            - title: VKWebEdit
+              url: vkwebedit
           - title: Music
             url: "#"
             items:
