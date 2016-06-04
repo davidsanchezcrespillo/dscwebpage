@@ -65,7 +65,7 @@ table.publications td.publication-title {
     padding: 0;
     min-height: 100px;
     text-align: center;
-    border: solid 1px #bbbbbb;
+    border: 0;
     position: relative;
 }
 
@@ -74,7 +74,24 @@ table.publications td.publication-title {
 }
 
 .tile img {
-    max-width: 100%;
+  max-width: 100%;
+  -webkit-filter: grayscale(100%);
+  -webkit-transition: .5s ease-in-out;
+  -moz-filter: grayscale(100%); 
+  -moz-transition: .5s ease-in-out;
+  -o-filter: grayscale(100%); 
+  -o-transition: .5s ease-in-out;
+  filter: grayscale(100%);
+}
+
+.tile img:hover {
+  -webkit-filter: grayscale(0%);
+  -webkit-transition: .5s ease-in-out;
+  -moz-filter: grayscale(0%);
+  -moz-transition: .5s ease-in-out;
+  -o-filter: grayscale(0%);
+  -o-transition: .5s ease-in-out;
+  filter: grayscale(0%);
 }
 
 .tile-caption {

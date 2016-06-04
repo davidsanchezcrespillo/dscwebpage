@@ -22,11 +22,11 @@
     <body>
     <div class="container">
 
-      <div class="row">
-        <div class="col-md-1">
+      <div class="row" style="margin-bottom:10px;">
+        <div class="col-md-7 clearfix">
+        <div class="pull-left" style="margin-right:10px;">
         <a href="{{ content_url('index.html') }}" title="Home"><img src="{{ media_url('img/blanque.png') }}" alt="" /></a>
         </div>
-        <div class="col-md-6">
           <span class="header-title"><a href="{{ content_url('index.html') }}" title="Home">David Sánchez Crespillo</a></span>
           <div class="top-space">
             {% from "macros.j2" import render_social_links with context %}
@@ -43,7 +43,6 @@
 
         </div>
       </div>
-      <hr>
 
       <div>
             {% filter markdown|typogrify -%}
@@ -51,8 +50,7 @@
             {%- endfilter %}
       </div>
 
-      <hr>
-      <div class="row">
+      <div class="row" style="margin-top: 10px;">
         <div class="col-xs-6">
           <div>
             {% from "macros.j2" import render_social_links with context %}
