@@ -24,7 +24,7 @@ context:
             url: "http://hyde.github.com"
             install: "http://hyde.github.com/install.html"
         menu:
-          - title: Development
+          - title: Dev
             url: "#"
             items:
             - title: LT Words
@@ -53,9 +53,6 @@ context:
           - title: Facebook
             url: http://www.facebook.com/davidsanchezcrespillo
             image: img/facebook.png
-          - title: Youtube
-            url: http://www.youtube.com/dinopmi
-            image: img/youtube.png
           - title: Github
             url: https://github.com/davidsanchezcrespillo
             image: img/github.png
